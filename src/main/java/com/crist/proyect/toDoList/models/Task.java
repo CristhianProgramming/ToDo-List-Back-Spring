@@ -1,9 +1,6 @@
 package com.crist.proyect.toDoList.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 
 import java.util.Date;
 
@@ -11,6 +8,7 @@ import java.util.Date;
 public class Task {
 
     @Id
+    @GeneratedValue
     private Integer Id;
 
     private String nameTask;

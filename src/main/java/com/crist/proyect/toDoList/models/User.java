@@ -1,6 +1,7 @@
 package com.crist.proyect.toDoList.models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import org.springframework.security.core.GrantedAuthority;
@@ -15,6 +16,7 @@ import java.util.List;
 public class User implements UserDetails {
 
     @Id
+    @GeneratedValue
     private Integer Id;
 
     private String firstName;
