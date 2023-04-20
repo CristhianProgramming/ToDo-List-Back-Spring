@@ -1,0 +1,33 @@
+package com.crist.proyect.toDoList.models.auth;
+
+import lombok.Builder;
+
+@Builder
+public class RequestAuth {
+    private String email;
+    private String password;
+
+    public RequestAuth() {
+
+    }
+    public RequestAuth(String email, String password) {
+        this.email = email;
+        this.password = password;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+}
