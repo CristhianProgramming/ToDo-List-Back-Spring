@@ -1,10 +1,12 @@
 package com.crist.proyect.toDoList.models;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 
 import java.util.Date;
 
 @Entity
+@Builder
 public class Task {
 
     @Id
@@ -28,14 +30,14 @@ public class Task {
     public Task() {
     }
 
-    public Task(Integer id, String nameTask, String descriptionTask, User owner, Date startDate, Date limitDate) {
+    public Task(Integer id, String nameTask, String descriptionTask, User owner, Date startDate, Date limitDate,boolean isComplet) {
         Id = id;
         this.nameTask = nameTask;
         this.descriptionTask = descriptionTask;
         this.owner = owner;
         this.startDate = startDate;
         this.limitDate = limitDate;
-        this.isComplet = false;
+        this.isComplet = isComplet;
     }
 
     public Integer getId() {
@@ -62,8 +64,9 @@ public class Task {
         this.descriptionTask = descriptionTask;
     }
 
-    public User getOwner() {
-        return owner;
+
+    public Integer getOwner() {
+        return owner.getId();
     }
 
     public void setOwner(User owner) {
