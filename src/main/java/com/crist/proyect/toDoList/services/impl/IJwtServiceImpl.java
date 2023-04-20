@@ -19,8 +19,8 @@ import java.util.function.Function;
 @Service
 public class IJwtServiceImpl implements IJwtService {
 
-    @Value("${secret-key}")
-    private static String SECRET_KEY;
+
+    private static final  String SECRET_KEY = "3R6BBTezk8tFhBBNOv4p+489dxFdz2UWOy5Ff/8snkHRuVWfMTgQryHNFN3SGy6Fz1WwIksnQiloAOYPYEwfh5eCBTFErOok9WuDblENTje5TsrNUEmrXXbee/Eg3fEcWAaNlxDcRUdIH/9cmEHUSaEd08hV+8Jq4gWYUEcnw+D2chv2Jp/H9XaAAKA97PlzJ37Jn4nm1/JsVmIU5sTGFQitkEq9qjMAdrN4vf/aQlLkfHG9WoEOaGh5lVJLvXlmbqs3mkE+biocOWpuCJjQhMBSNdNbnhY1tNY9RTw5dMH5lpGd+I";
 
     @Override
     public String extractUsername(String token) {
