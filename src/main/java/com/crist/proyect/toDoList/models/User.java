@@ -1,9 +1,7 @@
 package com.crist.proyect.toDoList.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import lombok.Builder;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -25,6 +23,8 @@ public class User implements UserDetails {
 
     private String lastName;
 
+    @Email
+    @Column(unique = true)
     private String email;
 
     private String password;

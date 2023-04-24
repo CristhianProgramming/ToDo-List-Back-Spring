@@ -2,6 +2,7 @@ package com.crist.proyect.toDoList.models;
 
 import jakarta.persistence.*;
 import lombok.Builder;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -22,6 +23,7 @@ public class Task {
 
     private Date startDate;
 
+    @DateTimeFormat(pattern = "YYYY-MM-DD")
     private Date limitDate;
 
     private boolean isComplet;
